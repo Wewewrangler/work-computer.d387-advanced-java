@@ -17,8 +17,8 @@ import static java.util.concurrent.Executors.newFixedThreadPool;
 public class D387SampleCodeApplication {
 	//todo	THE PROFESSOR HAD LINES 36,37 and 40,41 commented out
 
-	//todo FIX THE PARAMETERS() FOR THE "newFixedThreadPool()"
-	static ExecutorService messageExecutor = newFixedThreadPool();
+	//todo MAYBE CHANGE THE "newFixedThreadPool(5)" to "Executors.newSingleThreadExecutor()"
+	static ExecutorService messageExecutor = newFixedThreadPool(5);
 
 	public static void main(String[] args) {
 		SpringApplication.run(D387SampleCodeApplication.class, args);

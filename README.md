@@ -2,3 +2,7 @@
 
 # WESTERN GOVERNORS UNIVERSITY 
 ## D387 – ADVANCED JAVA
+
+# TASK B.
+## 1. Created 2 resource bundles for both french-canadian and english-US
+## 2. Creating a JSON array to retrieve the messsages from the resource-bundles  
