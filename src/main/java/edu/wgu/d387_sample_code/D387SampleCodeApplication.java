@@ -45,7 +45,7 @@ public class D387SampleCodeApplication {
 			//english output
 		messageExecutor.execute(() -> {
 			try {
-				InputStream stream = new ClassPathResource("translation_fr_CA.properties").getInputStream();
+				InputStream stream = new ClassPathResource("translation_en_US.properties").getInputStream();
 				properties.load(stream);
 				messages.add(properties.getProperty("welcome"));
 			} catch (Exception e) {
