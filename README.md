@@ -5,4 +5,9 @@
 
 # TASK B.
 ## 1. Created 2 resource bundles for both french-canadian and english-US
-## 2. Creating a JSON array to retrieve the messsages from the resource-bundles  
+## 2. Creating a JSON array to retrieve the messsages from the resource-bundles
+## 3. Created a service class that will handle the retrieval process.
+    #we do this because:
+    ## 1. it divides the responsibility into "Single Responsibility Principle (SRP)"
+    ## 2. it also makes the logic more reusable
+    ## etc.
