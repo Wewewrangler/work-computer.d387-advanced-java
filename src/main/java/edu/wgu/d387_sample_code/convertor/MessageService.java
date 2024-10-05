@@ -13,6 +13,7 @@ import java.util.concurrent.ExecutorService;
 import static java.util.concurrent.Executors.newFixedThreadPool;
 /*		FROM THE MULTITHREADING VIOEO		*/
 //todo             !!!!and FROM C3P0!!!
+@Service
 public class MessageService {
 
     private final ExecutorService messageExecutor = newFixedThreadPool(5);
@@ -28,7 +29,8 @@ public class MessageService {
             try {
                 InputStream stream = new ClassPathResource("translation_fr_CA.properties").getInputStream();
                 properties.load(stream);
-                messages.add(properties.getProperty("welcome"));
+//                messages.add(properties.getProperty("welcome"));
+                System.out.println(properties.getProperty("message"));
 
             } catch (Exception e) {
                 e.printStackTrace();
