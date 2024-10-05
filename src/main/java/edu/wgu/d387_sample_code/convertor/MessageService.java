@@ -29,8 +29,8 @@ public class MessageService {
             try {
                 InputStream stream = new ClassPathResource("translation_fr_CA.properties").getInputStream();
                 properties.load(stream);
-//                messages.add(properties.getProperty("welcome"));
-                System.out.println(properties.getProperty("message"));
+                messages.add(properties.getProperty("welcome"));
+//                System.out.println(properties.getProperty("message"));
 
             } catch (Exception e) {
                 e.printStackTrace();
