@@ -27,6 +27,9 @@ export class AppComponent implements OnInit{
   request!:ReserveRoomRequest;
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
+  //FROM VIDEO time stamp 5:28
+  welcome!:string
+  message2!:Observable<string>
 
     ngOnInit(){
       this.roomsearch= new FormGroup({
