@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
 
     ngOnInit(){
 
-        //FROM VIDEO TIMESTAMP 5:14
+        //FROM VIDEO TIMESTAMP 5:14 test
         this.message2 = this.httpClient.get(this.baseURL + '/api/presentation', {responseType: 'text'})
         this.getWelcomeMessage().subscribe(
           welcome =>{
@@ -48,7 +48,6 @@ export class AppComponent implements OnInit{
       });
 
  //     this.rooms=ROOMS;
-
 
     const roomsearchValueChanges$ = this.roomsearch.valueChanges;
 
