@@ -32,19 +32,19 @@ export class AppComponent implements OnInit{
   message2!:Observable<string>
 
     ngOnInit(){
-      this.roomsearch= new FormGroup({
-        checkin: new FormControl(' '),
-        checkout: new FormControl(' ')
 
         //FROM VIDEO TIMESTAMP 5:14
         this.message2 = this.httpClient.get(this.baseURL + '/api/presentation', {responseType: 'text'})
-        this.this.getWelcomeMessage().subscribe(
+        this.getWelcomeMessage().subscribe(
           welcome =>{
             console.log(Object.values(welcome));
             this.welcome=<any>Object.values(welcome);
           }
-        )
+        );
 
+      this.roomsearch= new FormGroup({
+        checkin: new FormControl(' '),
+        checkout: new FormControl(' ')
       });
 
  //     this.rooms=ROOMS;
