@@ -11,3 +11,4 @@
     ## 1. it divides the responsibility into "Single Responsibility Principle (SRP)"
     ## 2. it also makes the logic more reusable
     ## etc.
+## 4. added Junit5 & Mockito to pom.xml, IN CASE i want  to test the output from MessageService

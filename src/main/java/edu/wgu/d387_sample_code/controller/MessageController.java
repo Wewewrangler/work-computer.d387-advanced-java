@@ -20,7 +20,7 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-
+    // END POINT that returns MULTIPLE messages
     @GetMapping("/welcome")
     public List<String> getMessage() {
         // uses RECURSION to call the service to retrieve messages as a JSON array
