@@ -144,12 +144,6 @@ public class ReservationResource {
 
         return new ResponseEntity<>(new ReservableRoomResponse(), HttpStatus.OK);
     }
-    // gFROM PROFESSOR todo FIX ME
-    @RequestMapping(path =“/presentation”, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String [] showPresentation() {
-        String finalMessage = “first example”;
-         return new String[]{finalMessage};
-    }
 
     @RequestMapping(path = "/{reservationId}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> deleteReservation(
@@ -159,4 +153,15 @@ public class ReservationResource {
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
+    // gFROM PROFESSOR todo FIX ME
+    @RequestMapping(path=“/livePresentation”)
+    public ResponseEntity<String> displayLivePresentation() {
+        String presentation = “firsf example”;
+        return new ResponseEntity<String>(presentation, HttpStatus.OK);
+    }
+    @RequestMapping(path =“/presentation”, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String [] showPresentation() {
+        String finalMessage = “second example”;
+        return new String[]{finalMessage};
+    }
 }
