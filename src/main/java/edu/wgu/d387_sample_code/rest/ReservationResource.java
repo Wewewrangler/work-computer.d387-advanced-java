@@ -144,10 +144,10 @@ public class ReservationResource {
 
         return new ResponseEntity<>(new ReservableRoomResponse(), HttpStatus.OK);
     }
-    // gFROM PROFESSOR
-    @RequestMapping(path =“/presentation”, method = RequestMethod.GET, produces = MediaType.APLICATION_JSON_VALUE)
+    // gFROM PROFESSOR todo FIX ME
+    @RequestMapping(path =“/presentation”, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String [] showPresentation() {
-        String finalMessage = “example output from ReservationResource.java”;
+        String finalMessage = “first example”;
          return new String[]{finalMessage};
     }
 
