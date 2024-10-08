@@ -28,6 +28,7 @@ export class AppComponent implements OnInit{
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
   //FROM VIDEO time stamp 5:28
+  announcePresentation$!:Observable<string>
   welcome!:string
   message2!:Observable<string>
 
@@ -35,6 +36,7 @@ export class AppComponent implements OnInit{
 
     //FROM VIDEO TIMESTAMP 5:14 test
     this.message2 = this.httpClient.get(this.baseURL + '/api/presentation', {responseType: 'text'})
+    this.announcePresentation$ = this.httpClient.get (this.baseURL + ’/room/reservation/v1/livePresentationi’, {responseType: ‘text’})
     this.getWelcomeMessage().subscribe(
       welcome =>{
         console.log(Object.values(welcome));
@@ -93,10 +95,7 @@ export class AppComponent implements OnInit{
     return this.httpClient.get(this.baseURL + '/room/reservation/v1?checkin='+ this.currentCheckInVal + '&checkout='+this.currentCheckOutVal, {responseType: 'json'});
   }
 
-  //trom PROFESSOR
-  getWelcomeMessage(): Observable<any>{
-    return this.httpClient.get(this.baseURL + ‘/room/reservation/v1/presentation’, {responseType: ‘json’});
-  }
+
 
 }
 
