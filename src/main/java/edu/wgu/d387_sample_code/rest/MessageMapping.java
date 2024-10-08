@@ -10,8 +10,8 @@ import org.springframework.http.MediaType;
 public class MessageMapping {
 
     @RequestMapping(path = “/presentation”, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String[] showPresentation() {
+    public String showPresentation() {
         String finalMessage = “third message example”;
-        return new String[] {finalMessage};
+        return new String {finalMessage};
     }
 }
