@@ -154,7 +154,7 @@ public class ReservationResource {
     }
 
     // gFROM PROFESSOR todo FIX ME
-    @RequestMapping(path=“/livePresentation”)
+    @RequestMapping(path=“/livepresentation”)
     public ResponseEntity<String> displayLivePresentation() {
         String presentation = “first example”;
         return new ResponseEntity<String>(presentation, HttpStatus.OK);
