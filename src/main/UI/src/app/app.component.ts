@@ -36,13 +36,17 @@ export class AppComponent implements OnInit{
 
     //FROM VIDEO TIMESTAMP 5:14 test
     this.message2 = this.httpClient.get(this.baseURL + '/api/presentation', {responseType: 'text'})
-    this.announcePresentation$ = this.httpClient.get (this.baseURL + ’/room/reservation/v1/livePresentationi’, {responseType: ‘text’})
+    this.announcePresentation$ = this.httpClient.get (this.baseURL + ’/room/reservation/v1/livepresentation’, {responseType: ‘text’})
     this.getWelcomeMessage().subscribe(
       welcome =>{
         console.log(Object.values(welcome));
         this.welcome=<any>Object.values(welcome);
       }
     );
+    getWelcomeMessage(): Observable<any>{
+      return this.httpClient.get(this.baseURL + '/room/reservation/v1/presentation', {responseType: 'json'});
+    }
+
 
     this.roomsearch= new FormGroup({
       checkin: new FormControl(' '),
