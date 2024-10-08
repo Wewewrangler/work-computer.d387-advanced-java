@@ -156,7 +156,7 @@ public class ReservationResource {
     // gFROM PROFESSOR todo FIX ME
     @RequestMapping(path=“/livePresentation”)
     public ResponseEntity<String> displayLivePresentation() {
-        String presentation = “firsf example”;
+        String presentation = “first example”;
         return new ResponseEntity<String>(presentation, HttpStatus.OK);
     }
     @RequestMapping(path =“/presentation”, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
